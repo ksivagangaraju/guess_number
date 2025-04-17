@@ -14,7 +14,7 @@ let highscore = document.getElementById('highscore');
 let maxNum = 20;
 
 // User can input value between 1 and maxNum
-betweenNum.textContent = `&lt;Between 1 and ${maxNum}&gt;`;
+betweenNum.textContent = `<Between 1 and ${maxNum}>`;
 
 // Random number from 1 to maxNum
 let randomNum = Math.ceil(Math.random() * maxNum);
