@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <!-- Guess Number Container -->
+    <header class="guess-number-container">
+      <h1>Guess My Number!</h1>
+      <div class="again-btn-container">
+        <!-- User click "Again!" button for re-start guess number -->
+        <button type="button" class="btn" id="again">Again!</button>
+        <p>&lt;Between 1 and 20&gt;</p>
+      </div>
+
+      <!-- User guess number -->
+      <div id="userNumber">?</div>
+    </header>
+    <div class="horizontal"></div>
+
+    <!-- User Guess Container -->
+    <main class="user-guess-container">
+      <div class="left">
+        <!-- User trying to guess number -->
+        <input type="number" id="guessNumber" />
+
+        <!-- User click "Check!" button for guess number correct or not -->
+        <button type="button" class="btn" id="check">Check!</button>
+      </div>
+      <div class="right">
+        <!-- User guessing hints -->
+        <p id="guessHint">Start guessing...</p>
+
+        <!-- User score point -->
+        <p>💯 Score: <span id="score">20</span></p>
+
+        <!-- User highest score point -->
+        <p>🥇 Highscore: <span id="highscore">0</span></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

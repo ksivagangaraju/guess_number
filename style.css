@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+  /*
+  old 1rem = 16px
+  calculate percentage = 100% / 16px(=1rem) * 10px(=10px) = 62.5%
+  new 1rem = 10px
+  */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  /* Basic initialize */
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+}
+
+/*
+--- TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/***** Guess Number Container *****/
+.guess-number-container {
+  min-height: 35vh;
+  width: 100%;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.guess-number-container h1 {
+  font-size: 4.4rem;
+  text-align: center;
+  margin-bottom: 6.4rem;
+  line-height: 1.5;
+}
+
+.again-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  order: -1;
+  margin-bottom: 4.8rem;
+}
+
+.btn {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2rem;
+  color: #222;
+  background-color: #eee;
+  border: 0;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.again-btn-container p {
+  font-size: 1.6rem;
+}
+
+#userNumber {
+  padding: 3.2rem 4.8rem;
+  color: #222;
+  background-color: #eee;
+  font-size: 5.2rem;
+  text-align: center;
+  display: inline;
+  align-self: center;
+  position: absolute;
+  top: 100%;
+  transform: translate(0%, -50%);
+}
+
+input[type='number'] {
+  outline: none;
+}
+
+.horizontal {
+  border: 0.4rem solid #eee;
+}
+
+/*
+--- TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/***** User Guess Container *****/
+.user-guess-container {
+  min-height: 65vh;
+  width: 100%;
+  padding: 12.8rem 2.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left,
+.right {
+  width: 52rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left input[type='number'] {
+  border: 4px solid #eee;
+  background-color: transparent;
+  padding: 2.4rem;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 5.2rem;
+  width: 25rem;
+  color: #eee;
+  text-align: center;
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.right p {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.right p:first-child {
+  margin-bottom: 8rem;
+}
+
+/*
+Before (changed 1rem is 16px to 10px): 1rem = 16px and 1em = 16px are same
+After (changed 1rem is 16px to 10px): 1rem = 10px and 1em = 16px are not same
+Now 1em = 16px but 1rem = 10px
+We can 1em = 16px / 16px(1em) = 1em
+Example-1: width is 768px then we can 768px / 16px(1em) = 48em
+Example-2: width is 544px then we can 544px / 16px(1em) = 34em
+*/
+
+/* For Tablet Device Responsive */
+@media (max-width: 48em) {
+  .guess-number-container h1 {
+    font-size: 3rem;
+    margin-bottom: 5.2rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+  }
+
+  .user-guess-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6.4rem;
+    padding-top: 8rem;
+  }
+
+  .right p {
+    text-align: center;
+  }
+
+  .right p:first-child {
+    margin-bottom: 4.8rem;
+  }
+}
+
+/* For Mobile Device Responsive */
+@media (max-width: 34em) {
+  .guess-number-container,
+  .user-guess-container {
+    padding: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .guess-number-container h1 {
+    font-size: 2.4rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .again-btn-container p {
+    font-size: 0.8rem;
+  }
+
+  .user-guess-container {
+    padding-top: 6.2rem;
+  }
+
+  #userNumber {
+    font-size: 3.6rem;
+    padding: 2.4rem 3.6rem;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  #guessNumber {
+    font-size: 3.6rem;
+    padding: 1.6rem 2.4rem;
+    width: 20rem;
+  }
+
+  .right p {
+    font-size: 1.6rem;
+  }
+}
+
+/*
+--- TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITESPACE 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
