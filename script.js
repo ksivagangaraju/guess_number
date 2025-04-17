@@ -3,6 +3,7 @@
 // Basic Initialize Document Objects for index.html file
 let userNum = document.getElementById('userNumber');
 let againBtn = document.getElementById('again');
+let betweenNum = document.getElementById('betweenNumber');
 let guessNum = document.getElementById('guessNumber');
 let checkBtn = document.getElementById('check');
 let guessHint = document.getElementById('guessHint');
@@ -11,6 +12,9 @@ let highscore = document.getElementById('highscore');
 
 // User maximum number and only between 1 and maxNum
 let maxNum = 20;
+
+// User can input value between 1 and maxNum
+betweenNum.textContent = `&lt;Between 1 and ${maxNum}&gt;`;
 
 // Random number from 1 to maxNum
 let randomNum = Math.ceil(Math.random() * maxNum);
