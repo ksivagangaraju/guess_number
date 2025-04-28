@@ -95,7 +95,6 @@ checkBtn.addEventListener('click', function () {
           guessNum.disabled = true;
           checkBtn.disabled = true;
           guessHint.textContent = '💥 You lost the game!';
-          score.textContent = scoreCount;
         }
       }
       score.textContent = --scoreCount;
