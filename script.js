@@ -89,6 +89,16 @@ checkBtn.addEventListener('click', function () {
         scoreCount++;
         highscore.textContent = highestScore;
       }
+      else if (userInputValue !== randomNum) {
+        if (scoreCount == 0) {
+          guessNum.value = '';
+          guessNum.disabled = true;
+          checkBtn.disabled = true;
+          guessHint.textContent = '💥 You lost the game!';
+          scoreCount = 0;
+          score.textContent = scoreCount;
+        }
+      }
       score.textContent = --scoreCount;
     }
   }
