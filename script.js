@@ -90,7 +90,7 @@ checkBtn.addEventListener('click', function () {
         highscore.textContent = highestScore;
       }
       else if (userInputValue !== randomNum) {
-        if (scoreCount == 0) {
+        if (scoreCount == 1) {
           guessNum.value = '';
           guessNum.disabled = true;
           checkBtn.disabled = true;
