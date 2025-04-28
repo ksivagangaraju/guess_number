@@ -91,6 +91,8 @@ checkBtn.addEventListener('click', function () {
       }
       else if (userInputValue !== randomNum) {
         if (scoreCount == 1) {
+          document.body.style.backgroundColor = '#e03131';
+          userNum.textContent = 0;
           guessNum.value = '';
           guessNum.disabled = true;
           checkBtn.disabled = true;
